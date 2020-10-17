@@ -71,7 +71,7 @@ module "ecs_fargate" {
     {
       name      = local.container_name
       #image     = "nginx:latest"
-      image     = "437642037048.dkr.ecr.us-east-2.amazonaws.com/infini-service:latest"
+      image     = "43723237048.dkr.ecr.us-east-2.amazonaws.com/infini-service:latest"
       essential = true
       logConfiguration = {
         logDriver = "awslogs"
@@ -100,11 +100,11 @@ module "ecs_fargate" {
         },
         {
           name  = "AWS_ACCESS_KEY_ID"
-          value = "AKIAWLZL7Q44PRBG7GKL"
+          value = "abcdefghijklmnopqrstuvwxyz"
         },
         {
           name  = "AWS_SECRET_ACCESS_KEY"
-          value = "VS8Rrqc9g/3n6W4ISRTXZpDAqCPdtb6Lck57m13l"
+          value = "VS8Rrqc9g/abcdefghijklmnopqrstuvwxyz"
         },
            {
           name  = "HIBERNATE_CACHE_USE_QUERY_CACHE"
@@ -133,11 +133,11 @@ module "ecs_fargate" {
         },
         {
           name  = "JHIPSTER_MAIL_FROM"
-          value = "nagendra@velocityworks.io"
+          value = "nagendra@infiniai.com"
         },
         {
           name  = "JHIPSTER_SECURITY_AUTHENTICATION_JWT_SECRET"
-          value = "adVS8Rrqc9g/3n6W4ISRTXZpDAqCPdtb6Lck57m13lVS8Rrqc9g/3n6W4ISRTXZpDAqCPdtb6Lck57m13lVS8Rrqc9g/3n6W4ISRTXZpDAqCPdtb6Lck57m13l"
+          value = "adVS8Rrqc9g/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz"
         },
         {
           name  = "JHIPSTER_SLEEP"
@@ -177,7 +177,7 @@ module "ecs_fargate" {
         },
         {
           name  = "SPRING_MAIL_PASSWORD"
-          value = "BLYjRaohGR/xIaDv3BIPnPlTghIbr5+lSg8zHO7j198x"
+          value = "BLYjRaohGR/abcdefghijklmnopqrstuvwxyz+abcdefghijklmnopqrstuvwxyz"
         },
         {
           name  = "SPRING_MAIL_USERNAME"
