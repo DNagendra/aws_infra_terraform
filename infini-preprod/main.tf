@@ -1,12 +1,12 @@
 locals {
-  tenant_name             = "denzi"
+  tenant_name             = "infini"
   environment             = "preprod"
   cidr_block              = "175.255.0.0/16"
   db_username             = "preproddb"
   db_password             = "tenant123$"
-  db_identifier           = "denzi-preprod-instance"
-  db_instance             = "mysql-denzi-preprod-instance"
-  tf_remote_state_bucket  = "denzi-preprod-remote-state"
+  db_identifier           = "infini-preprod-instance"
+  db_instance             = "mysql-infini-preprod-instance"
+  tf_remote_state_bucket  = "infini-preprod-remote-state"
   region                  = "us-east-2"
   
   # update the remote state values at the bottom of this script
@@ -73,7 +73,7 @@ module "ecs_fargate" {
     {
       name      = local.container_name
       #image     = "nginx:latest"
-      image     = "437642037048.dkr.ecr.us-east-2.amazonaws.com/denzi-service:latest"
+      image     = "437642037048.dkr.ecr.us-east-2.amazonaws.com/infini-service:latest"
       essential = true
       logConfiguration = {
         logDriver = "awslogs"
@@ -92,7 +92,7 @@ module "ecs_fargate" {
       environment = [
 # CF url is temporary. Route 53 url should come here once it is implemented
         {
-          "name": "APPLICATION_DENZI_MFA-SWITCH-ENABLED",
+          "name": "APPLICATION_infini_MFA-SWITCH-ENABLED",
           "value": "false"
         },
         # CF url is temporary. Route 53 url should come here once it is implemented
@@ -378,7 +378,7 @@ module "s3-bucket" {
 
 terraform {
   backend "s3" {
-    bucket = "denzi-preprod-remote-state"
+    bucket = "infini-preprod-remote-state"
     key    = "terraform/prod/terraform.tfstate"
     region = "us-east-2"
   }

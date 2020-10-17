@@ -1,4 +1,4 @@
-# denzi-tenant
+# infini-tenant
 
 Module to orchestrate various modules to build a single tenant. A separate folder should be created per tenant similar to this one to maintain the state of it. 
 

@@ -69,7 +69,7 @@ module "ecs_fargate" {
   container_definitions = jsonencode([
     {
       name      = local.container_name
-      image     = "437642037048.dkr.ecr.us-east-2.amazonaws.com/denzi-service:latest"
+      image     = "437642037048.dkr.ecr.us-east-2.amazonaws.com/infini-service:latest"
       essential = true
       logConfiguration = {
         logDriver = "awslogs"
@@ -88,7 +88,7 @@ module "ecs_fargate" {
       environment = [
         # CF url is temporary. Route 53 url should come here once it is implemented
         {
-          "name": "APPLICATION_DENZI_MFA-SWITCH-ENABLED",
+          "name": "APPLICATION_infini_MFA-SWITCH-ENABLED",
           "value": "false"
         },
         # CF url is temporary. Route 53 url should come here once it is implemented
