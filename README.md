@@ -1,9 +1,9 @@
-# denzi-devops
+# infini-devops
 
-Terraform module to create the Denzi Infrastructure from grond-up using a single command. For now, this REPO contains two folders
-1. denzi - Dev environment for a tenant called "denzi", which is up & running
+Terraform module to create the infini Infrastructure from grond-up using a single command. For now, this REPO contains two folders
+1. infini - Dev environment for a tenant called "infini", which is up & running
 2. modules - all modules needed to spin up a tenant
-3. denzi-uat - QA environment for a tenant called "denzi",which is up and running.
+3. infini-uat - QA environment for a tenant called "infini",which is up and running.
 
 ## What to do to onboard a new tenant?
 Steps are 
@@ -17,7 +17,7 @@ Steps are
 8. Install mysql client on Amazon Linux AMI by typing:  sudo yum install mysql57
 9. Install existing client, run: sudo yum install mysql57
 10. connect to database. sample command for QA DB below and enter the password
-11. mysql -h denzi-qa-instance.clo2fyyn2ezx.us-east-2.rds.amazonaws.com -P 3306 -u denziuat -p
+11. mysql -h infini-qa-instance.clo2fyyn2ezx.us-east-2.rds.amazonaws.com -P 3306 -u infiniuat -p
 
 show databases;
 use <databasename>;
@@ -25,5 +25,5 @@ show tables;
 
 12. Run your insert queires to add the users to the database and provide necessary roles to user to access the application.
 
-refer `denzi` tenant folder for next steps for each environment specific instructions.
+refer `infini` tenant folder for next steps for each environment specific instructions.
 
